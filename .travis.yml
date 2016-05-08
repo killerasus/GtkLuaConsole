@@ -13,3 +13,17 @@ before_install:
 
 script:
   - make -j4
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "MFP1yovWZaitpw7cT4oLYbPkictAa+ao48aVEFWXYcWkyNvCUG5z2TniL0gTWPwfQGQXp/gHslH30cVBucKTFbbTdhqapjAlH8HOfA8LjYwzTKokYDJRaXAa4aSZsE8NG6C6yx6JwdM6OtZ7PTasvKiSfVpbk3rPYyj9j8ETV2ZaprHPFACi3NfoEDCjaaPkAAtLTd8FYAC47NvsbyS9nLvPOduc/Wvn31vxn+W9izretdorRyCG4iMFCQXJ8zBi2BaFINa8TOFfAol4e+rMIeljJCcdXPPz5iwKTDp2honuYrwOzHk77AIvf6mIoyy3QN9vcPlFBtVx5FTQudUO6TpIbBurRKxHTBywVq/SCVq7x5DxKbPxWzgEaC4IbTvzheSvM2avq0z2tCye+i3FrEQERYwzYUwFyC8UtwWFUo9LwWea3aniWo3tSBCqOHZzeG6u8p8zTwvfEX+xFudI1i0c/d9Z0b0281A5BJE167rfNdOjc7qRBw3tccYdON7l74EZcMDMWazgAwENJHCEQl7u/evc4lSUg1hM6wZLSIVHoYqNBRrNlAuT1ynhsOin4+hrqqFbUZVd9bEJlJWINCNk6b2BdBGdSkuEJ2PhKkJS/0SUPFUvWjyBDUtlIAHnvRpwfqFyUvl9L9wayeQMHQ5++p9geGkGyHj0M7gJi1A="
+
+addons:
+  coverity_scan:
+    project:
+      name: "killerasus/GtkLuaConsole"
+      description: "Build submitted via Travis CI"
+    build_command:   "make -j 4"
+    branch_pattern: master
