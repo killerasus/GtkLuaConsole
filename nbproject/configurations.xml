@@ -45,7 +45,7 @@
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs gtk+-2.0`</linkerOptionItem>
-            <linkerOptionItem>`pkg-config --libs lua`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs lua5.1`</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -77,7 +77,7 @@
         </asmTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerOptionItem>`pkg-config --libs lua`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs lua5.1`</linkerOptionItem>
             <linkerOptionItem>`pkg-config --libs gtk+-2.0`</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
