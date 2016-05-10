@@ -25,6 +25,7 @@ addons:
     project:
       name: "killerasus/GtkLuaConsole"
       description: "Build submitted via Travis CI"
+    notification_email: killerasus+coverity@gmail.com
     build_command_prepend: "make clean"
     build_command:   "make -j 4"
     branch_pattern: master
