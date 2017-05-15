@@ -16,7 +16,7 @@ before_install:
 script:
   - cmake .
   - make -j4
-  - cppcheck --quiet --error-exitcode=1 .
+  - cppcheck --quiet --error-exitcode=1 --force .
 
 env:
   global:
